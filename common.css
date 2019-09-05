@@ -1,59 +1,20 @@
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
         ::-webkit-scrollbar {width: 6px;}
         ::-webkit-scrollbar-track {background-color:#ddd;}
-        ::-webkit-scrollbar-thumb {background-color:#000; border-radius: 10px;}
+        ::-webkit-scrollbar-thumb {background-color:#555; border-radius: 10px;}
         ::-webkit-scrollbar-thumb:hover {}
         ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {display: none;} 
 
 * {margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;}
+*::selection {background-color: #000; color: #fff;}
 a {text-decoration: none; color: inherit;}
 ul, ol {list-style: none;}
-
-        @keyframes seesaw {
-            0% {}
-            40% {transform: rotate(-10deg);}
-            45% {transform: rotate(7deg);}
-            52% {transform: rotate(-5deg);}
-            60% {transform: rotate(3deg);}
-            65% {transform: rotate(-1deg);}
-            70% {transform: rotate(0deg);}
-            100% {}
-        }
         
 #main {
-    min-width: 1914px; width: 100%; height: auto; overflow-x: hidden;}
+    min-width: 1914px; width: 1914px; height: auto; overflow-x: hidden;}
 .main_box {
     width: 100%; 
-    height: 1010px;
+    height: 1080px;
+    overflow-y: hidden;
     position: relative; 
-    background-color: #000; 
-    padding-top: 1px;
-    background-image: url(graphic/background.png);
-    background-size: contain;
-    background-attachment: fixed;
 }
-#sub_header {
-    width: 1914px;
-    height: 200px;
-    background-image: url(graphic/sub_header.jpg);
-    background-size: cover;
-}
-        #sub_navigation_2 {
-            position: absolute;
-            left: 0;
-            width: 9%;
-            height: 1149px;
-            padding: 20px;
-            transition: .5s;
-            z-index: 2;
-            box-sizing: border-box;
-            border-right: 1px solid #000;
-            overflow: hidden;
-        }
-        #sub_navigation_2:hover {background-color: #000; color: #fff;}
-        #sub_navigation_2 li {width: 100%; height: 180px; line-height: 10; font-size: 120%; cursor: pointer; transform: rotate(-45deg);}
-        #sub_navigation_2 li::first-letter {text-decoration-line: underline; text-decoration-color: #ffd000;}
-        #sub_navigation_2 li:hover {color: #ffd000; transition: 1s;}
-
-#title {font-size: 3rem; margin: 50px 0 50px 18%; height: 38px; background-size: contain; background-repeat: no-repeat; text-indent: 45px; line-height: 38px;}
