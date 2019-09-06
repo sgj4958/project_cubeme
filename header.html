@@ -1,5 +1,6 @@
 
     <div id="navigation">
+        <div id="top">∧</div>
         <div id="back"></div>
         <div id="backboard"></div>
         <div id="logo">
@@ -25,6 +26,19 @@
     
     <style>
         #navigation {position: fixed; z-index: 10;}
+        #navigation #top {
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+            transition: .5s;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #navigation #top:hover {color: #fff; background-color: #000;}
         #navigation #back {
             width: 1920px; 
             height: 1080px; 
@@ -84,7 +98,7 @@
             top: 0; 
             width: 200px; 
             height: 1010px; 
-            background-color: rgba(200,200,200,.9); 
+            background-color: #fff; 
             font-size: 2rem; 
             padding: 200px 0 0 20px; 
             box-sizing: border-box;
@@ -144,5 +158,9 @@
                 $('#back').css({'background-color':'rgba(0,0,0,0)','visibility':'hidden'});
                 navigation_menu_active = false;
             }
-        })
+        });
+        $('#navigation #top').click(function(){
+            $("html,body").stop().animate({scrollTop: '0px'}, 
+                                          {duration: 800});
+        });
     </script>

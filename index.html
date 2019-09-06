@@ -48,15 +48,75 @@
         #main_1 .main_1_content:nth-child(2) .product_img {background-image: url(images/product_block.png);}
         #main_1 .main_1_content:nth-child(3) .product_img {background-image: url(images/product_perfect.png);}
         
-        #main_2 .main_2_content {}
+        #main_2 {width: 1200px; margin: 0 auto; height: 2100px; overflow: hidden;}
+        #main_2 .main_2_content {height: 50%;}
         #main_2 .main_2_content >div {
             position: absolute;
-            
+            background-size: contain;
+            background-repeat: no-repeat;
+            font-size: 1.6rem;
+            overflow: hidden;
+            transition: 1s .5s;
+            transform-origin: 100% 100%;
         }
-        #main_2 .main_2_content:nth-child(1) .main_2_img:nth-child(1) {background-image: url(images/skin1.jpg);}
-        #main_2 .main_2_content:nth-child(1) .main_2_img:nth-child(2) {background-image: url(images/skin2.jpg);}
-        #main_2 .main_2_content:nth-child(2) .main_2_img:nth-child(1) {background-image: url(images/skin1.jpg);}
-        #main_2 .main_2_content:nth-child(2) .main_2_img:nth-child(2) {background-image: url(images/skin2.jpg);}
+        #main_2 .main_2_content .more {
+            font-size: 1.1rem; 
+            border: 1px solid #000; 
+            padding: 5px 15px; 
+            transition: .5s; 
+            overflow: visible; 
+            background-color: #fff;
+        }
+        #main_2 .main_2_content .more:hover {background-color: #000; color: #fff;}
+        #main_2 .main_2_content .more:before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid hsl(236, 32%, 26%);
+        }
+        #main_2 .main_2_content .more:hover:before {
+            transition: all 0.75s ease-in-out;
+            transform-origin: center;
+            transform: scale(1.75);
+            opacity: 0;
+        }
+        
+        #main_2 .main_2_content .main_2_img {transition: 3s;}
+        #main_2 .main_2_content .main_2_img:hover {transform: scale(1.1); z-index: 1;}
+        
+        #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 631px; height: 760px;}
+        
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(1) .main_2_img {background-image: url(images/skin1.jpg);}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {background-image: url(images/skin2.jpg); width: 353px; height: 459px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 50px; top: 50px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 450px; top: 500px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 800px; top: 300px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 850px; top: 330px;}
+        #main_2 .main_2_content:nth-child(1) .more {left: 890px; top: 380px;}
+        
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(1) .main_2_img {background-image: url(images/body1.jpg);}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {background-image: url(images/body2.jpg); width: 307px; height: 464px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 50px; bottom: 100px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 500px; bottom: 500px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 800px; bottom: 430px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 870px; bottom: 400px;}
+        #main_2 .main_2_content:nth-child(2) .more {right: 870px; bottom: 350px;}
+        
+        #main_3 {font-size: 1.8rem; text-align: center; margin-top: 50px; height: auto;}
+        
+        .instagram-wrap {max-width: 900px; margin: 50px auto; overflow: hidden;}
+        .instagram-item {float: left; width: 33.33%; position: relative;}
+        .instagram-item a {display: block; width: 100%; height: 100%; padding-bottom: 100%; position: relative; background-size: cover; background-position: center center;}
+        .instagram-item-inner {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, 0.4); opacity: 0; visibility: hidden; transition: all .4s;}
+        .instagram-item-inner p {display: inline-block; padding-left: 33px; position: relative; top: 50%; transform: translateY(-50%); font-size: 20px; color: #fff;}
+        .instagram-item-inner p:before {display: block; width: 20px; height: 20px; position: absolute; left: 0; top: 50%; margin-top: -11px; content: '♡'; font-size: 20px; line-height: 1;}
+        .instagram-item a:hover .instagram-item-inner {opacity: 1; visibility: visible;}
+        
+        #main_3 #back {position: absolute; left: 0; top: 100px; color: #ddd; font-size: .9rem;}
     </style>
     
 </head>
@@ -74,17 +134,88 @@
         </div>
         <div class="main_box" id="main_2">
             <div class="main_2_content">
-                <div class="main_2_img"></div>
-                <div class="main_2_img"></div>
+                <div><div class="main_2_img"></div></div>
+                <div><div class="main_2_img"></div></div>
                 <div>속부터 시작하는</div>
                 <div>BEAUTY SKIN</div>
+                <div class="more"><a href="">MORE</a></div>
             </div>
             <div class="main_2_content">
-                <div class="main_2_img"></div>
-                <div class="main_2_img"></div>
+                <div><div class="main_2_img"></div></div>
+                <div><div class="main_2_img"></div></div>
                 <div>속부터 시작하는</div>
                 <div>SLIM BODY</div>
+                <div class="more"><a href="">MORE</a></div>
             </div>
+        </div>
+        <div class="main_box" id="main_3">
+            <div>#INSTAGRAM :: cubeme_official</div>
+            <div id="back"></div>
+            <div class="instagram-wrap">
+					<div class="instagram-item" id="insta-item-0">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-1">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-2">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-3">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-4">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-5">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-6">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-7">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+					<div class="instagram-item" id="insta-item-8">
+						<a href="" target="_blank">
+							<div class="instagram-item-inner">
+								<p></p>
+							</div><!-- .instagram-item-inner -->
+						</a>
+					</div><!-- .instagram-item -->
+				</div><!-- .instagram-wrap -->
         </div>
     </div>
     
@@ -98,6 +229,8 @@
             $("#footer").load("footer.html");
             
             scroll100per();
+            instagram();
+            x_axis_move_initial();
         });
         
         $('#main_1 .main_1_content').mouseover(function(){
@@ -152,7 +285,7 @@
                             }catch(e){}
                         }
                     }
-                    // 화면 이동 0.8초(800)
+                    // 화면 이동 0.x초(x00)
                     $("html,body").stop().animate({
                         scrollTop: moveTop + 'px'
                     }, {
@@ -163,22 +296,52 @@
             });
         }
         
-        $('.flying_ani').wrap('<div class="flying_ani_wrap"></div>');
-        function flying_ani_initial() {
-            $('.flying_ani_wrap:nth-child(2n+1)').css({'transform':'translate(-150%)'});
-            $('.flying_ani_wrap:nth-child(2n)').css({'transform':'translate(150%)'});
-            $('.flying_ani_wrap').css({'transition':'1s'});
+        
+        function instagram(){
+            var token = "7853375095.1677ed0.d28bf14a606e495b9e885adb741ab50e";
+            $.ajax({
+                type: "GET",
+                dataType: "jsonp",
+                cache: false,
+                url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + token + "&count=12",
+                success: function(response) {
+                    if (response.data.length > 0){
+                        var instagram_text = new Array();
+                        for(i = 0; i < 9; i++){
+                            if(response.data[i]){
+                                like = response.data[i].likes.count;
+                                $('#insta-item-'+i+' p').html(like);
+                                $('#insta-item-'+i+' a').css('background-image', 'url(' + response.data[i].images.standard_resolution.url + ')');
+                                $('#insta-item-'+i+' a').attr('href', response.data[i].link);
+                                instagram_text[i] = response.data[i].caption.text;
+                            }else{
+                                $('#insta-item-'+i).remove();
+                            }
+                        }
+                    }
+                                //$('#main_3 #back').text(instagram_text);
+                }
+            });
+        }
+        
+        
+        function x_axis_move_initial() {
+            $('.main_2_content:nth-child(1)').css({'transform':'translateX(-100%)'});
+            $('.main_2_content:nth-child(2)').css({'transform':'translateX(100%)'});
+            $('.main_2_content').css({'transition':'1s'});
+            $('.main_2_content >div').css('transform','scale(.5)');
         }
         window.addEventListener('scroll', function() {
-            var flying_ani_wrap = document.getElementsByClassName('flying_ani_wrap');
-            var adjust = 800;
-            
-            for(i=0; i<flying_ani_wrap.length; i++) {
-                if(flying_ani_wrap[i].offsetTop-adjust <= window.pageYOffset) {
-                    $(flying_ani_wrap[i]).css({
-                        'transform' : 'translateX(0%)'
-                    })}}
-            if(window.pageYOffset == 0) {flying_ani_initial();}
+            var main_2_content = document.getElementsByClassName('main_2_content');
+            var adjust = -500;
+           
+            for(i=0; i<main_2_content.length; i++) {
+                if(main_2_content[i].offsetTop-adjust <= window.pageYOffset) {
+                    $(main_2_content[i]).css('transform','translateX(0%)');
+                    $('.main_2_content:nth-child('+(i+1)+') >div').css('transform','scale(1)');
+                }
+            }
+            if(window.pageYOffset == 0) {x_axis_move_initial();}
         });
         
     </script>
