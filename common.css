@@ -18,3 +18,13 @@ ul, ol {list-style: none;}
     overflow-y: hidden;
     position: relative; 
 }
+
+        /* 반응형 설정 시작 */
+        @media only screen and (min-width: 1282px) {}
+        @media only screen and (max-width: 1281px) {}
+        @media only screen and (max-width: 769px) {}
+        @media only screen and (max-width: 541px) {
+            html {font-size: 8px;}
+            #main {min-width: 540px; width: 540px;}
+        }
+        /* 반응형 설정 끝 */

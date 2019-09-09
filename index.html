@@ -12,6 +12,8 @@
         #main_1 {
             background-image: url(images/main_banner.jpg);
             transition: .5s;
+            background-size: auto;
+            background-position: center;
         }
         #main_1 .main_1_content {
             width: 33.33%; 
@@ -20,7 +22,7 @@
             float: left; 
             border-right: 1px solid #fff; 
             box-sizing: border-box; 
-            font-size: 5em; 
+            font-size: 5rem; 
             color: #fff; 
             text-align: center; 
             line-height: 50rem; 
@@ -85,7 +87,7 @@
             opacity: 0;
         }
         
-        #main_2 .main_2_content .main_2_img {transition: 3s;}
+        #main_2 .main_2_content .main_2_img {transition: 3s; background-size: contain; background-repeat: no-repeat;}
         #main_2 .main_2_content .main_2_img:hover {transform: scale(1.1); z-index: 1;}
         
         #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 631px; height: 760px;}
@@ -108,15 +110,96 @@
         
         #main_3 {font-size: 1.8rem; text-align: center; margin-top: 50px; height: auto;}
         
-        .instagram-wrap {max-width: 900px; margin: 50px auto; overflow: hidden;}
-        .instagram-item {float: left; width: 33.33%; position: relative;}
-        .instagram-item a {display: block; width: 100%; height: 100%; padding-bottom: 100%; position: relative; background-size: cover; background-position: center center;}
-        .instagram-item-inner {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0, 0, 0, 0.4); opacity: 0; visibility: hidden; transition: all .4s;}
-        .instagram-item-inner p {display: inline-block; padding-left: 33px; position: relative; top: 50%; transform: translateY(-50%); font-size: 20px; color: #fff;}
-        .instagram-item-inner p:before {display: block; width: 20px; height: 20px; position: absolute; left: 0; top: 50%; margin-top: -11px; content: '♡'; font-size: 20px; line-height: 1;}
+        .instagram-wrap {width: 47%; margin: 50px auto; overflow: hidden;}
+        .instagram-item {
+            float: left; 
+            width: 33.33%; 
+            position: relative; 
+            border-radius: 25%; 
+            overflow: hidden;
+        }
+        .instagram-item a {
+            display: block; 
+            width: 100%; 
+            height: 100%; 
+            padding-bottom: 100%; 
+            position: relative; 
+            background-size: cover; 
+            background-position: center center;
+        }
+        .instagram-item-inner {
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            left: 0; 
+            top: 0; 
+            background: rgba(0, 0, 0, 0.4); 
+            opacity: 0; 
+            visibility: hidden; 
+            transition: .4s;
+        }
+        .instagram-item-inner p {
+            display: inline-block; 
+            padding-left: 33px; 
+            position: relative; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            font-size: 1.25rem; 
+            color: #fff;
+        }
+        .instagram-item-inner p:before {
+            display: block; 
+            width: 20px; 
+            height: 20px; 
+            position: absolute; 
+            left: 0; 
+            top: 50%; 
+            margin-top: -11px; 
+            content: '♡'; 
+            font-size: 1.25rem; 
+            line-height: 1;
+        }
         .instagram-item a:hover .instagram-item-inner {opacity: 1; visibility: visible;}
+        .instagram-item a:hover {transform: scale(1.1); transition: 3s;}
         
-        #main_3 #back {position: absolute; left: 0; top: 100px; color: #ddd; font-size: .9rem;}
+        /* 인스타 쇼 시작 */
+        .instagram-item {visibility: hidden; opacity: 0; transform: scale(.8); transition: .5s;}
+        .show_instagram {visibility: visible; transform: scale(1); opacity: 1;}
+        /* 인스타 쇼 끝 */
+        
+        /* 반응형 설정 시작 */
+        @media only screen and (min-width: 1282px) {}
+        @media only screen and (max-width: 1281px) {}
+        @media only screen and (max-width: 769px) {}
+        @media only screen and (max-width: 541px) {
+            
+            #main_1 {height: 640px;}
+            
+            #main_1 .main_1_content {width: 100%; height: 33.33%; float: none; line-height: 20rem; border-bottom: 1px solid #fff;}
+            #main_1 .product_img {width: 100px; left: 40%;}
+            #main_1 .main_1_content:hover {line-height: 50rem;}
+            
+            #main_2 {width: 540px; height: 1000px; margin: 0;}
+            
+            #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {width: 120px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {width: 100px;}
+            
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 50px; top: 50px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 200px; top: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 300px; top: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 330px; top: 220px;}
+            #main_2 .main_2_content:nth-child(1) .more {left: 310px; top: 240px;}
+            
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 50px; bottom: -310px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 220px; bottom: 20px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 300px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 330px;}
+            #main_2 .main_2_content:nth-child(2) .more {right: 310px;}
+            
+            #main_3 {margin-top: -70px;}
+        }
+        /* 반응형 설정 끝 */
     </style>
     
 </head>
@@ -150,7 +233,6 @@
         </div>
         <div class="main_box" id="main_3">
             <div>#INSTAGRAM :: cubeme_official</div>
-            <div id="back"></div>
             <div class="instagram-wrap">
 					<div class="instagram-item" id="insta-item-0">
 						<a href="" target="_blank">
@@ -233,10 +315,33 @@
             x_axis_move_initial();
         });
         
+        function resolution() {
+            if(innerWidth > 1280) return 0;
+            else if(innerWidth > 768) return 1;
+            else if(innerWidth > 540) return 2;
+            else return 3;
+        } 
+        
         $('#main_1 .main_1_content').mouseover(function(){
             var index = $(this).index()+1;
+            
+            if(!resolution()){
             $('#main_1 .main_1_content:not(:nth-child('+index+'))').css({'width':'25%'});
             $('#main_1 .main_1_content:nth-child('+index+')').css({'width':'50%'});
+            }
+            else {
+                switch(resolution()){
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        $('#main_1 .main_1_content:not(:nth-child('+index+'))').css({'height':'25%'});
+                        $('#main_1 .main_1_content:nth-child('+index+')').css({'height':'50%'});
+                        break;
+                }
+            }
+            
             switch(index) {
                 case 1:
                     $('#main_1').css({'background-image':'url(images/pattern_cube_collagen.jpg)'});
@@ -249,8 +354,22 @@
                     break;
             }
         });
+        
         $('#main_1 .main_1_content').mouseleave(function(){
-            $('#main_1 .main_1_content').css({'width':'33.33%'});
+            if(!resolution())
+            $('#main_1 .main_1_content').css({'width':'33.33%','height':'100%'});
+            else {
+                switch(resolution()){
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        $('#main_1 .main_1_content').css({'height':'33.33%','width':'100%'});
+                        break;
+                }
+            }
+            
             $('#main_1').css({'background-image':'url(images/main_banner.jpg)'});
         });
 
@@ -306,24 +425,23 @@
                 url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=" + token + "&count=12",
                 success: function(response) {
                     if (response.data.length > 0){
-                        var instagram_text = new Array();
                         for(i = 0; i < 9; i++){
                             if(response.data[i]){
                                 like = response.data[i].likes.count;
                                 $('#insta-item-'+i+' p').html(like);
                                 $('#insta-item-'+i+' a').css('background-image', 'url(' + response.data[i].images.standard_resolution.url + ')');
                                 $('#insta-item-'+i+' a').attr('href', response.data[i].link);
-                                instagram_text[i] = response.data[i].caption.text;
                             }else{
                                 $('#insta-item-'+i).remove();
                             }
                         }
                     }
-                                //$('#main_3 #back').text(instagram_text);
-                }
+                },
+                error: function(error) {
+                $('.instagram-item a').css('background','url(images/instagram_error.jpg');
+                console.log(error);}
             });
         }
-        
         
         function x_axis_move_initial() {
             $('.main_2_content:nth-child(1)').css({'transform':'translateX(-100%)'});
@@ -331,18 +449,39 @@
             $('.main_2_content').css({'transition':'1s'});
             $('.main_2_content >div').css('transform','scale(.5)');
         }
+        
         window.addEventListener('scroll', function() {
             var main_2_content = document.getElementsByClassName('main_2_content');
             var adjust = -500;
-           
+            switch(resolution()){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    adjust = 0;
+                    break;
+            }
             for(i=0; i<main_2_content.length; i++) {
                 if(main_2_content[i].offsetTop-adjust <= window.pageYOffset) {
                     $(main_2_content[i]).css('transform','translateX(0%)');
                     $('.main_2_content:nth-child('+(i+1)+') >div').css('transform','scale(1)');
                 }
             }
-            if(window.pageYOffset == 0) {x_axis_move_initial();}
+            if(window.pageYOffset == 0) {
+                x_axis_move_initial();
+                $('#main_3 .instagram-item').removeClass('show_instagram');
+            }
+            if( $('#main_3').offset().top-adjust-500 <= window.pageYOffset ) show_instagram();
         });
         
+        function show_instagram() {
+            var i = 1;
+            function show_repeat() {
+                if( i<=$('#main_3 .instagram-item').length ) $('#main_3 .instagram-item:nth-child('+i+')').addClass('show_instagram');
+                i++;
+            }
+            setInterval(show_repeat,100);
+        }
     </script>
 </html>

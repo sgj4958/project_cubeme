@@ -44,6 +44,7 @@
             right: 100px;
             top: 50px;
             font-size: 1.2rem;
+            width: 200px;
         }
         #footer #footer_sub div {
             height: 30px;
@@ -51,6 +52,7 @@
             background-size: contain;
             text-indent: 40px;
             position: relative;
+            width: 100%;
         }
         #footer #footer_sub div span {
             position: absolute;
@@ -70,21 +72,21 @@
             transform: scaleY(0);
         }
         #footer #footer_sub div span.bottom {
-            bottom: 3px;
+            bottom: 0px;
             transform-origin: bottom right;
         }
         #footer #footer_sub div span.right {
-            right: 3px;
+            right: 0px;
             transform-origin: top right;
             transition-delay: 0.05s;
         }
         #footer #footer_sub div span.top {
-            top: 3px;
+            top: 0px;
             transform-origin: top left;
             transition-delay: 0.15s;
         }
         #footer #footer_sub div span.left {
-            left: 3px;
+            left: 0px;
             transform-origin: bottom left;
             transition-delay: 0.25s;
         }
@@ -104,7 +106,7 @@
             transform-origin: top left;
             transform: scaleY(1);
         }
-        
+        #footer #footer_sub div:hover {background-color: rgba(255,255,255,.7); transition: .5s .2s;}
         #footer #footer_sub #help {background-image: url(images/icon_support.png);}
         #footer #footer_sub #contact {background-image: url(images/icon_mail.png);}
         #footer li {
@@ -125,4 +127,14 @@
             margin-top: -4px;
             background: #777;
         }
+        
+        /* 반응형 설정 시작 */
+        @media only screen and (min-width: 1282px) {}
+        @media only screen and (max-width: 1281px) {}
+        @media only screen and (max-width: 769px) {}
+        @media only screen and (max-width: 541px) {
+            #footer {padding: 10px 20px;}
+            #footer #footer_sub {width: 120px; top: 10px;}
+        }
+        /* 반응형 설정 끝 */
     </style>
