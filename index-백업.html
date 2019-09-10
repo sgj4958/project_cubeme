@@ -25,7 +25,7 @@
             font-size: 5rem; 
             color: #fff; 
             text-align: center; 
-            line-height: 100vh; 
+            line-height: 50rem; 
             cursor: pointer;
             transition: 1s;
             position: relative;
@@ -33,14 +33,14 @@
         #main_1 .main_1_content::first-letter {text-decoration-line: underline; text-decoration-color: #fff;}
         #main_1 .main_1_content:hover::first-letter {text-decoration-color: #000;}
         #main_1 .main_1_content:last-child {border: 0;}
-        #main_1 .main_1_content:hover {transform-origin: 0 100%; line-height: 150vh; background-color: transparent;}
+        #main_1 .main_1_content:hover {transform-origin: 0 100%; line-height: 100rem; background-color: transparent;}
         #main_1 .product_img {
             position: absolute;
             top: 20%; 
+            left: 30%;
             background-repeat: no-repeat; 
             background-size: contain; 
-            width: 15.63vw; 
-            left: 35%;
+            width: 300px;
             height: 1046px;
             opacity: 0;
             transition: 1s;
@@ -64,7 +64,7 @@
         #main_2 .main_2_content .more {
             font-size: 1.1rem; 
             border: 1px solid #000; 
-            padding: 0.5vh 0.8vw; 
+            padding: 5px 15px; 
             transition: .5s; 
             overflow: visible; 
             background-color: #fff;
@@ -90,27 +90,27 @@
         #main_2 .main_2_content .main_2_img {transition: 3s; background-size: contain; background-repeat: no-repeat;}
         #main_2 .main_2_content .main_2_img:hover {transform: scale(1.1); z-index: 1;}
         
-        #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 32.86vw; height: 70.37vh;}
+        #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 631px; height: 760px;}
         
         #main_2 .main_2_content:nth-child(1) >div:nth-child(1) .main_2_img {background-image: url(images/skin1.jpg);}
-        #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {background-image: url(images/skin2.jpg); width: 18.39vw; height: 42.5vh;}
-        #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 2.6vw; top: 9.26vh;}
-        #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 45%; top: 41%;}
-        #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 67%; top: 20%;}
-        #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 72%; top: 23%;}
-        #main_2 .main_2_content:nth-child(1) .more {left: 85%; top: 28%;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {background-image: url(images/skin2.jpg); width: 353px; height: 459px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 50px; top: 50px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 450px; top: 500px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 800px; top: 300px;}
+        #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 850px; top: 330px;}
+        #main_2 .main_2_content:nth-child(1) .more {left: 890px; top: 380px;}
         
         #main_2 .main_2_content:nth-child(2) >div:nth-child(1) .main_2_img {background-image: url(images/body1.jpg);}
-        #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {background-image: url(images/body2.jpg); width: 15.99vw; height: 42.96vh;}
-        #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 2.6vw; bottom: 9.26vh;}
-        #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 47%; bottom: 54%;}
-        #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 67%; bottom: 68%;}
-        #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 75%; bottom: 65%;}
-        #main_2 .main_2_content:nth-child(2) .more {right: 83%; bottom: 60%;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {background-image: url(images/body2.jpg); width: 307px; height: 464px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 50px; bottom: 100px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 500px; bottom: 500px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 800px; bottom: 430px;}
+        #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 870px; bottom: 400px;}
+        #main_2 .main_2_content:nth-child(2) .more {right: 870px; bottom: 350px;}
         
-        #main_3 {font-size: 1.8rem; text-align: center; margin-top: 5vh; height: auto;}
+        #main_3 {font-size: 1.8rem; text-align: center; margin-top: 50px; height: auto;}
         
-        .instagram-wrap {width: 47%; margin: 2vh auto 20vh; overflow: hidden;}
+        .instagram-wrap {width: 47%; margin: 50px auto; overflow: hidden;}
         .instagram-item {
             float: left; 
             width: 33.33%; 
@@ -169,17 +169,75 @@
         
         /* 반응형 설정 시작 */
         @media only screen and (max-width: 1281px) {
+            #main_1 .main_1_content {line-height: 100vh;}
+            #main_1 .main_1_content:hover {line-height: 150vh;}
+            #main_1 .product_img {width: 15.63vw; left: 35%;}
+            
+            #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 32.86vw;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {width: 18.39vw;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {width: 15.99vw;}
+            
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 50px; top: 50px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 50%; top: 32%;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 67%; top: 20%;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 72%; top: 23%;}
+            #main_2 .main_2_content:nth-child(1) .more {left: 85%; top: 28%;}
+            
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 50px; bottom: 100px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 51%; bottom: 54%;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 67%; bottom: 68%;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 75%; bottom: 65%;}
+            #main_2 .main_2_content:nth-child(2) .more {right: 83%; bottom: 60%;}
             
             #main_3 {margin-top: -30px;}
         }
         @media only screen and (max-width: 769px) {
             #main_1 .main_1_content {width: 100%; height: 33.33%; float: none; line-height: 30vh; border-bottom: 1px solid #fff;}
+            #main_1 .product_img {width: 150px; left: 40%;}
             #main_1 .main_1_content:hover {line-height: 80vh;}
-            #main_1 .product_img {left: 40%;}
+            
+            #main_2 {width: 768px; height: 1000px;}
+            
+            #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 250px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {width: 170px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {width: 150px;}
+            
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 50px; top: 50px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 250px; top: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 400px; top: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 430px; top: 230px;}
+            #main_2 .main_2_content:nth-child(1) .more {left: 430px; top: 270px;}
+            
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 50px; bottom: -310px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 250px; bottom: 90px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 380px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 430px;}
+            #main_2 .main_2_content:nth-child(2) .more {right: 420px;}
+            
+            #main_3 {margin-top: -30px;}
         }
         @media only screen and (max-width: 541px) {
-            #main_1 .main_1_content {line-height: 30vh;}
+            #main_1 .main_1_content {width: 100%; height: 33.33%; float: none; line-height: 30vh; border-bottom: 1px solid #fff;}
+            #main_1 .product_img {width: 100px; left: 40%;}
             #main_1 .main_1_content:hover {line-height: 60vh;}
+            
+            #main_2 {width: 541px; height: 1000px;}
+            
+            #main_2 .main_2_content >div:nth-child(1) .main_2_img {width: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) .main_2_img {width: 120px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {width: 100px;}
+            
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(1) {left: 50px; top: 50px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 200px; top: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 300px; top: 200px;}
+            #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 330px; top: 220px;}
+            #main_2 .main_2_content:nth-child(1) .more {left: 310px; top: 240px;}
+            
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(1) {right: 50px; bottom: -310px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(2) {right: 220px; bottom: 20px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(3) {right: 300px;}
+            #main_2 .main_2_content:nth-child(2) >div:nth-child(4) {right: 330px;}
+            #main_2 .main_2_content:nth-child(2) .more {right: 310px;}
             
             #main_3 {margin-top: -70px;}
         }

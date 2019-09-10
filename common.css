@@ -10,21 +10,23 @@
 a {text-decoration: none; color: inherit;}
 ul, ol {list-style: none;}
         
-#main {
-    min-width: 1914px; width: 1914px; height: auto; overflow-x: hidden;}
+#main {width: 100%; height: auto; overflow-x: hidden;}
 .main_box {
     width: 100%; 
-    height: 1080px;
-    overflow-y: hidden;
+    height: 100vh;
+    overflow: hidden;
     position: relative; 
 }
 
-        /* 반응형 설정 시작 */
-        @media only screen and (min-width: 1282px) {}
-        @media only screen and (max-width: 1281px) {}
-        @media only screen and (max-width: 769px) {}
+html {font-size: 0.83vw;}
+        /* 반응형 설정 시작 
+        @media only screen and (max-width: 1281px) {
+            html {font-size: 15px;}
+}
+        @media only screen and (max-width: 769px) {
+            html {font-size: 12px;}
+}
         @media only screen and (max-width: 541px) {
             html {font-size: 8px;}
-            #main {min-width: 540px; width: 540px;}
         }
-        /* 반응형 설정 끝 */
+         반응형 설정 끝 */

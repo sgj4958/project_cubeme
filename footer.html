@@ -44,7 +44,7 @@
             right: 100px;
             top: 50px;
             font-size: 1.2rem;
-            width: 200px;
+            width: 170px;
         }
         #footer #footer_sub div {
             height: 30px;
@@ -129,12 +129,19 @@
         }
         
         /* 반응형 설정 시작 */
-        @media only screen and (min-width: 1282px) {}
-        @media only screen and (max-width: 1281px) {}
-        @media only screen and (max-width: 769px) {}
+        @media only screen and (max-width: 1281px) {
+            #footer {padding: 25px 100px;}
+            #footer #footer_sub {width: 170px; top: 30px;}
+        }
+        @media only screen and (max-width: 769px) {
+            #footer {padding: 20px 50px;}
+            #footer #footer_sub {width: 130px; top: 20px;}
+            #footer #footer_sub div {height: 30px; text-indent: 35px;}
+        }
         @media only screen and (max-width: 541px) {
             #footer {padding: 10px 20px;}
             #footer #footer_sub {width: 120px; top: 10px;}
+            #footer #footer_sub div {height: 20px; text-indent: 25px;}
         }
         /* 반응형 설정 끝 */
     </style>

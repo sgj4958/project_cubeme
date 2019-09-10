@@ -38,7 +38,7 @@
             font-weight: bold;
             cursor: pointer;
         }
-        #navigation #top:hover {color: #fff; background-color: #000;}
+        #navigation #top:hover {color: #fff; background-color: #000; border-color: #fff;}
         #navigation #back {
             width: 1920px; 
             height: 1080px; 
@@ -61,7 +61,7 @@
             height: 43px;
             background-size: contain;
             background-repeat: no-repeat;
-            left: 45px;
+            left: 10px;
             top: 10px;
             z-index: 1;
         }
@@ -137,9 +137,12 @@
         #navigation #instagram:hover {background-image: url(images/icon-instagram2.png);}
         
         /* 반응형 설정 시작 */
-        @media only screen and (min-width: 1282px) {}
         @media only screen and (max-width: 1281px) {}
-        @media only screen and (max-width: 769px) {}
+        @media only screen and (max-width: 769px) {
+            #navigation #logo {left: 7px; top: 7px;}
+            #navigation #menu {top: 65px; left: 65px;}
+            #navigation #backboard {border-width: 95px;}
+        }
         @media only screen and (max-width: 541px) {
             #navigation #logo {left: 5px; top: 5px;}
             #navigation #menu {top: 50px; left: 50px;}
