@@ -373,14 +373,14 @@
                     if (delta < 0) {
                         if ($(elmSelecter).next() != undefined) {
                             try{
-                                moveTop += 1080; //$(elmSelecter).next().offset().top;
+                                moveTop += innerHeight; //$(elmSelecter).next().offset().top;
                             }catch(e){}
                         }
                     // 마우스휠을 아래에서 위로
                     } else {
                         if ($(elmSelecter).prev() != undefined) {
                             try{
-                                moveTop -= 1080;//$(elmSelecter).prev().offset().top;
+                                moveTop -= innerHeight;//$(elmSelecter).prev().offset().top;
                             }catch(e){}
                         }
                     }
