@@ -9,10 +9,12 @@
     <link rel="icon" sizes="16x16 32x32" href="images/favicon.ico">
     
     <style>
-        .main_1_backimg {width: 50%; height: 100%; float: left; background-size: cover;}
-        .main_1_backimg:nth-child(1) {background-image: url(images/skin_main_1.jpg);}
-        .main_1_backimg:nth-child(2) {background-image: url(images/skin_main_2.jpg);}
-        .main_1_text {
+        .main_box_backimg {width: 50%; height: 100%; float: left; background-size: cover;}
+        #main_1 .main_box_backimg:nth-child(1) {background-image: url(images/skin_main_1.jpg);}
+        #main_1 .main_box_backimg:nth-child(2) {background-image: url(images/skin_main_2.jpg);}
+        #main_2 .main_box_backimg:nth-child(1) {background-image: url(images/diet_main_1.jpg);}
+        #main_2 .main_box_backimg:nth-child(2) {background-image: url(images/diet_main_2.jpg);}
+        .main_box_text {
             position: absolute; 
             top: 10%; 
             font-size: 3rem; 
@@ -24,15 +26,15 @@
             transform: translateY(30%);
             opacity: 0;
         }
-        .main_1_text:nth-child(4) {
-            color: rgba(0,0,0,.7); 
+        .main_box_text:nth-child(4) {
+            color: rgba(0,0,0,.6); 
             text-shadow: none; 
             top: 16%; 
             font-size: 2rem; 
             transition-delay: .3s;
         }
-        .fade_in_rising {transform: translateY(0); opacity: 1; transition: 1s;}
-        #main_1_container {
+        .fade_in_rising {transform: translateY(0); opacity: 1; transition: .7s;}
+        .main_box_container {
             position: absolute;
             width: 180vw; 
             height: 50%; 
@@ -40,15 +42,29 @@
             background-color: rgba(255,255,255,.8); 
             border-top: 1px solid;
             border-bottom: 1px solid;
-            border-color: #000;
+            border-color: rgba(0,0,0,.3);
         }
-        .main_1_product {width: 30vw; height: 100%; float: left; background-size: contain; background-repeat: no-repeat; background-position: center;}
-        .main_1_product:nth-child(1) {background-image: url(images/product_collagen.png);}
-        .main_1_product:nth-child(2) {background-image: url(images/product_waterbank.png);}
-        .main_1_product:nth-child(3) {background-image: url(images/product_shine.png);}
-        .main_1_product:nth-child(4) {background-image: url(images/product_youth.png);}
-        .main_1_product:nth-child(5) {background-image: url(images/product_clean.png);}
-        .main_1_product:nth-child(6) {background-image: url(images/product_perfect.png);}
+        .main_box_product {width: 30vw; height: 100%; float: left; background-size: contain; background-repeat: no-repeat; background-position: center; position: relative; margin-top: -2%; cursor: pointer; transition: .3s;}
+        .main_box_product p {text-align: center; color: rgba(0,0,0,.6); position: absolute; bottom: -3%; width: 100%; transition: .5s;}
+        .main_box_product p::first-line {font-weight: bold; color: #000;}
+        #main_1 .main_box_product:nth-child(1) {background-image: url(images/product_collagen.png);}
+        #main_1 .main_box_product:nth-child(2) {background-image: url(images/product_waterbank.png);}
+        #main_1 .main_box_product:nth-child(3) {background-image: url(images/product_shine.png);}
+        #main_1 .main_box_product:nth-child(4) {background-image: url(images/product_youth.png);}
+        #main_1 .main_box_product:nth-child(5) {background-image: url(images/product_clean.png);}
+        #main_1 .main_box_product:nth-child(6) {background-image: url(images/product_perfect.png);}
+        #main_2 .main_box_product:nth-child(1) {background-image: url(images/product_block.png);}
+        #main_2 .main_box_product:nth-child(2) {background-image: url(images/product_cut.png);}
+        
+        .emblem {background-size: contain; background-position: center; background-repeat: no-repeat; width: 4vw; height: 4vw; margin-left: 10%;}
+        .emblem:nth-child(2) {margin-top: 20%;}
+        #emblem_powder {background-image: url(images/emblem_powderroom.png);}
+        #emblem_beauty {background-image: url(images/emblem_2019beautypick.png);}
+        #emblem_singles {background-image: url(images/emblem_singlespick.png);}
+        #emblem_styler {background-image: url(images/emblem_styler2019.png);}
+        
+        .main_box_product:hover {opacity: .7;}
+        .main_box_product:hover p {bottom: 40%; font-size: 1.6rem; color: #000; border: 1px solid #000; background-color: rgba(255,255,255,.7);}
         
         /* 반응형 설정 시작 */
         @media only screen and (max-width: 1281px) {
@@ -66,20 +82,32 @@
     
     <div id="main">
         <div class="main_box" id="main_1">
-            <div class="main_1_backimg"></div>
-            <div class="main_1_backimg"></div>
-            <div class="main_1_text">Beauty Skin by Eating</div>
-            <div class="main_1_text">Skin Products</div>
-            <div id="main_1_container">
-                <div class="main_1_product"></div>
-                <div class="main_1_product"></div>
-                <div class="main_1_product"></div>
-                <div class="main_1_product"></div>
-                <div class="main_1_product"></div>
-                <div class="main_1_product"></div>
+            <div class="main_box_backimg"></div>
+            <div class="main_box_backimg"></div>
+            <div class="main_box_text">Beauty Skin by Eating</div>
+            <div class="main_box_text">Skin Products</div>
+            <div class="main_box_container">
+                <div class="main_box_product"><p>COLLAGEN CUBE<br>2 / 4 / 7 Weeks</p>
+                    <div class="emblem" id="emblem_powder"></div>
+                    <div class="emblem" id="emblem_beauty"></div>
+                    <div class="emblem" id="emblem_singles"></div></div>
+                <div class="main_box_product"><p>WATERBANK CUBE<br>2 / 4 / 7 Weeks</p></div>
+                <div class="main_box_product"><p>SHINE CUBE<br>14 / 28 / 30 Days</p></div>
+                <div class="main_box_product"><p>YOUTH CUBE<br>2 / 4 / 7 Weeks</p></div>
+                <div class="main_box_product"><p>CLEAN CUBE<br>2 / 4 / 7 Weeks</p></div>
+                <div class="main_box_product"><p>PERFECT CUBE<br>4 Weeks</p>
+                    <div class="emblem" id="emblem_styler"></div></div>
             </div>
         </div>
         <div class="main_box" id="main_2">
+            <div class="main_box_backimg"></div>
+            <div class="main_box_backimg"></div>
+            <div class="main_box_text">Slim Fit by Eating</div>
+            <div class="main_box_text">Diet products</div>
+            <div class="main_box_container">
+                <div class="main_box_product"><p>BLOCK CUBE<br>3 / 8 Weeks</p></div>
+                <div class="main_box_product"><p>CUT CUBE<br>4 / 8 Weeks</p></div>
+            </div>
         </div>
     </div>
     
@@ -93,17 +121,14 @@
             $("#footer").load("footer.html");
             
             scroll100per();
-            fade_in_rising();
+            $('#main_1 .main_box_text').addClass('fade_in_rising');
         });
         
-        $('#main_1_container').mousemove(function(e) {
-            var move = e.pageX / innerWidth * -44.5;
-            $('#main_1_container').css('transform','translateX('+move+'%)');
+        $('.main_box_container').mousemove(function(e) {
+            var move = e.pageX / innerWidth * ( $(this).children('.main_box_product').length * -7.417 );
+                //-44.5
+            $(this).css('transform','translateX('+move+'%)');
         });
-        
-        function fade_in_rising() {
-            $('.main_1_text').addClass('fade_in_rising');
-        }
         
         function resolution() {
             if(innerWidth > 1280) return 0;
@@ -167,20 +192,19 @@
         }
         
         window.addEventListener('scroll', function() {
-            var adjust = -500;
+            var adjust = innerHeight/2;
             switch(resolution()){
                 case 1:
-                    adjust = -300;
                     break;
                 case 2:
-                    adjust = -100;
                     break;
                 case 3:
-                    adjust = 0;
                     break;
             }
-            if(window.pageYOffset == 0) {
-            }
+            
+            //$('.main_box_text').removeClass('fade_in_rising');
+            if(window.pageYOffset <= adjust) $('#main_1 .main_box_text').addClass('fade_in_rising');
+            if(window.pageYOffset >= $('#main_2').offset().top -adjust) $('#main_2 .main_box_text').addClass('fade_in_rising');
         });
         
     </script>
