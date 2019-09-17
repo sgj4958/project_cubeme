@@ -9,7 +9,7 @@
     <link rel="icon" sizes="16x16 32x32" href="images/favicon.ico">
     
     <style>
-        #main_1 {background-image: url(images/pattern_cube_collagen.jpg);}
+        #main_1 {background-image: url(images/pattern_cube_youth.jpg);}
         
         .main_box_split {width: 50%; height: 100%; float: left; vertical-align: middle;}
         
@@ -35,9 +35,9 @@
             background-repeat: no-repeat;
             background-color: rgba(255,255,255,.7);
         }
-        .face_front {transform: rotateY(0deg) translateZ(10vw); background-image: url(images/product_collagen.png);}
-        .face_right {transform: rotateY(90deg) translateZ(10vw); background-image: url(images/product_collagen_2.png);}
-        .face_back {transform: rotateY(180deg) translateZ(10vw); background-image: url(images/product_collagen_3.png);}
+        .face_front {transform: rotateY(0deg) translateZ(10vw); background-image: url(images/product_youth.png);}
+        .face_right {transform: rotateY(90deg) translateZ(10vw); background-image: url(images/product_youth_2.png);}
+        .face_back {transform: rotateY(180deg) translateZ(10vw); background-image: url(images/product_youth_3.png);}
         .face_left {transform: rotateY(-90deg) translateZ(10vw); display: none;}
         #split_left {position: relative;}
         .cube_move {position: absolute; top: 0; width: 50%; height: 100%; cursor: col-resize;}
@@ -50,11 +50,11 @@
         #split_right p:nth-child(1) {font-size: 3rem; font-weight: bold;}
         #split_right p:nth-child(2) {font-size: 2rem; color: #fff; margin-top: -1.5vw; border-bottom: 1px solid #fff;}
         #split_right p:nth-child(3) {font-size: 1.1rem;}
-        #split_right .product_day {border-radius: 1vw; display: inline-block; border: 1px solid #dc746a; text-align: center; padding: 1.5vw 1vw; cursor: pointer; transition: .5s; margin: 1vw 1vw 1vw 0;}
-        #split_right .product_day:hover {background-color: #dc746a; color: #fff; border-color: #fff;}
-        .product_day_hoverclass {background-color: #dc746a; color: #fff; border-color: #fff;}
+        #split_right .product_day {border-radius: 1vw; display: inline-block; border: 1px solid #bf8573; text-align: center; padding: 1.5vw 1vw; cursor: pointer; transition: .5s; margin: 1vw 1vw 1vw 0;}
+        #split_right .product_day:hover {background-color: #bf8573; color: #fff; border-color: #fff;}
+        .product_day_hoverclass {background-color: #bf8573; color: #fff; border-color: #fff;}
         #split_right .product_day_text:not(:nth-of-type(4)) {display: none;}
-        #split_right #gotobuy {width: 10vw; padding: 2% 1%; border: 1px solid #faa; text-align: center; margin: 3vh 0; background-color: #dc746a; color: #fff; cursor: pointer; font-size: 1.2rem;}
+        #split_right #gotobuy {width: 10vw; padding: 2% 1%; border: 1px solid #fff; text-align: center; margin: 3vh 0; background-color: #bf8573; color: #fff; cursor: pointer; font-size: 1.2rem;}
         #split_right #gotobuy:hover {animation: jelly .5s;}
         @keyframes jelly {
             0%,100% {transform: scale(1, 1);}
@@ -98,22 +98,23 @@
                     </div>
                 </div>
                 <div>좌/우측을 클릭하거나, 드래그해보세요!</div>
+                <!--
                 <div class="emblem" id="emblem_powder"></div>
                 <div class="emblem" id="emblem_beauty"></div>
-                <div class="emblem" id="emblem_singles"></div>
+                <div class="emblem" id="emblem_singles"></div>-->
                 <div class="cube_move" id="move_left"></div>
                 <div class="cube_move" id="move_right"></div>
             </div>
             <div class="main_box_split" id="split_right">
-                <p>COLLAGEN CUBE</p>
-                <p>콜라겐 큐브</p>
-                <p>매년 1%씩 감소하는 콜라겐, <br>흡수율이 높은 저분자 피쉬콜라겐으로 꾸준히 먹어서 관리하자!</p>
+                <p>YOUTH CUBE</p>
+                <p>유스 큐브</p>
+                <p>비타민E, 미네랄(셀렌, 망간, 아연) 함유! <br>현대인의 활기찬 삶을 위한 항산화 건강기능식품</p>
                 <div class="product_day">2주분</div>
                 <div class="product_day">4주분</div>
                 <div class="product_day">7주분</div>
-                <div class="product_day_text">2주 분량, 성인 1일 1회, 4정 그대로 섭취<br>28g (500mg x 56 Tablets)</div>
-                <div class="product_day_text">4주 분량, 성인 1일 1회, 4정 그대로 섭취<br>56g (500mg x 112 Tablets)</div>
-                <div class="product_day_text">7주 분량, 성인 1일 1회, 4정 그대로 섭취<br>98g (500mg x 196 Tablets)</div>
+                <div class="product_day_text">2주 분량, 성인 1일 1회, 4정 그대로 섭취<br>25.2g (600mg x 42 Tablets)</div>
+                <div class="product_day_text">4주 분량, 성인 1일 1회, 4정 그대로 섭취<br>50.4g (600mg x 84 Tablets)</div>
+                <div class="product_day_text">7주 분량, 성인 1일 1회, 4정 그대로 섭취<br>88.2g (600mg x 147 Tablets)</div>
                 <div id="gotobuy">구매하기</div>
                 <div>※ 아모레퍼시픽몰로 이동합니다.</div>
             </div>
@@ -240,13 +241,13 @@
         $('#gotobuy').click(function() {
             switch(product_day) {
                 case 0:
-                    window.open('https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=25381&onlineProdCode=111850000015');
+                    window.open('https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=25384&onlineProdCode=111850000018');
                     break;
                 case 1:
-                    window.open('https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=25373&onlineProdCode=111850000010');
+                    window.open('https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=25379&onlineProdCode=111850000013');
                     break;
                 case 2:
-                    window.open('https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=21751&onlineProdCode=111850000004');
+                    window.open('https://www.amorepacificmall.com/kr/ko/product/detail?onlineProdSn=21748&onlineProdCode=111850000001');
                     break;
             }
         });

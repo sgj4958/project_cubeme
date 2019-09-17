@@ -44,9 +44,10 @@
             border-bottom: 1px solid;
             border-color: rgba(0,0,0,.3);
         }
-        .main_box_product {width: 30vw; height: 100%; float: left; background-size: contain; background-repeat: no-repeat; background-position: center; position: relative; margin-top: -2%; cursor: pointer; transition: .3s;}
+        .main_box_product {width: 30vw; height: 100%; float: left; background-size: contain; background-repeat: no-repeat; background-position: center; position: relative; margin-top: -2%; transition: .3s;}
         .main_box_product p {text-align: center; color: rgba(0,0,0,.6); position: absolute; bottom: -3%; width: 100%; transition: .5s;}
         .main_box_product p::first-line {font-weight: bold; color: #000;}
+        .main_box_product p:after {position: absolute; content: ''; background-image: url(images/icon_more.png); width: 1.8vw; height: 1.8vw; background-size: cover; margin-left: .5vw; opacity: 0; transition: .7s; transform: scale(.5);}
         #main_1 .main_box_product:nth-child(1) {background-image: url(images/product_collagen.png);}
         #main_1 .main_box_product:nth-child(2) {background-image: url(images/product_waterbank.png);}
         #main_1 .main_box_product:nth-child(3) {background-image: url(images/product_shine.png);}
@@ -65,6 +66,8 @@
         
         .main_box_product:hover {opacity: .7;}
         .main_box_product:hover p {bottom: 40%; font-size: 1.6rem; color: #000; border: 1px solid #000; background-color: rgba(255,255,255,.7);}
+        .main_box_product:hover p:after {opacity: 1; transform: scale(1);}
+        /*.main_box_product >a {width: 100%; height: 100%; position: absolute; top: 0; left: 0;}*/
         
         /* 반응형 설정 시작 */
         @media only screen and (max-width: 1281px) {
@@ -87,15 +90,15 @@
             <div class="main_box_text">Beauty Skin by Eating</div>
             <div class="main_box_text">Skin Products</div>
             <div class="main_box_container">
-                <div class="main_box_product"><p>COLLAGEN CUBE<br>2 / 4 / 7 Weeks</p>
+                <div class="main_box_product"><a href="product_collagen.html"><p>COLLAGEN CUBE<br>2 / 4 / 7 Weeks</p></a>
                     <div class="emblem" id="emblem_powder"></div>
                     <div class="emblem" id="emblem_beauty"></div>
                     <div class="emblem" id="emblem_singles"></div></div>
-                <div class="main_box_product"><p>WATERBANK CUBE<br>2 / 4 / 7 Weeks</p></div>
-                <div class="main_box_product"><p>SHINE CUBE<br>14 / 28 / 30 Days</p></div>
-                <div class="main_box_product"><p>YOUTH CUBE<br>2 / 4 / 7 Weeks</p></div>
-                <div class="main_box_product"><p>CLEAN CUBE<br>2 / 4 / 7 Weeks</p></div>
-                <div class="main_box_product"><p>PERFECT CUBE<br>4 Weeks</p>
+                <div class="main_box_product"><a href="product_waterbank.html"><p>WATERBANK CUBE<br>2 / 4 / 7 Weeks</p></a></div>
+                <div class="main_box_product"><a href="product_shine.html"><p>SHINE CUBE<br>14 / 28 / 30 Days</p></a></div>
+                <div class="main_box_product"><a href="product_youth.html"><p>YOUTH CUBE<br>2 / 4 / 7 Weeks</p></a></div>
+                <div class="main_box_product"><a href="product_clean.html"><p>CLEAN CUBE<br>2 / 4 / 7 Weeks</p></a></div>
+                <div class="main_box_product"><a href="product_perfect.html"><p>PERFECT CUBE<br>4 Weeks</p></a>
                     <div class="emblem" id="emblem_styler"></div></div>
             </div>
         </div>
@@ -105,8 +108,8 @@
             <div class="main_box_text">Slim Fit by Eating</div>
             <div class="main_box_text">Diet products</div>
             <div class="main_box_container">
-                <div class="main_box_product"><p>BLOCK CUBE<br>3 / 8 Weeks</p></div>
-                <div class="main_box_product"><p>CUT CUBE<br>4 / 8 Weeks</p></div>
+                <div class="main_box_product"><a href="product_block.html"><p>BLOCK CUBE<br>3 / 8 Weeks</p></a></div>
+                <div class="main_box_product"><a href="product_cut.html"><p>CUT CUBE<br>4 / 8 Weeks</p></a></div>
             </div>
         </div>
     </div>

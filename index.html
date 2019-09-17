@@ -98,7 +98,7 @@
         #main_2 .main_2_content:nth-child(1) >div:nth-child(2) {left: 45%; top: 41%;}
         #main_2 .main_2_content:nth-child(1) >div:nth-child(3) {left: 67%; top: 20%;}
         #main_2 .main_2_content:nth-child(1) >div:nth-child(4) {left: 72%; top: 23%;}
-        #main_2 .main_2_content:nth-child(1) .more {left: 85%; top: 28%;}
+        #main_2 .main_2_content:nth-child(1) .more {left: 83%; top: 28%;}
         
         #main_2 .main_2_content:nth-child(2) >div:nth-child(1) .main_2_img {background-image: url(images/body1.jpg);}
         #main_2 .main_2_content:nth-child(2) >div:nth-child(2) .main_2_img {background-image: url(images/body2.jpg); width: 15.99vw; height: 42.96vh;}
@@ -115,9 +115,17 @@
             float: left; 
             width: 33.33%; 
             position: relative; 
-            border-radius: 25%; 
             overflow: hidden;
         }
+        .instagram-item:nth-child(1) {border-radius: 25% 0 25% 0;}
+        .instagram-item:nth-child(2) {border-radius: 0 0 25% 25%;}
+        .instagram-item:nth-child(3) {border-radius: 0 25% 0 25%;}
+        .instagram-item:nth-child(4) {border-radius: 0 25% 25% 0;}
+        .instagram-item:nth-child(5) {border-radius: 25%;}
+        .instagram-item:nth-child(6) {border-radius: 25% 0 0 25%;}
+        .instagram-item:nth-child(7) {border-radius: 0 25% 0 25%;}
+        .instagram-item:nth-child(8) {border-radius: 25% 25% 0 0;}
+        .instagram-item:nth-child(9) {border-radius: 25% 0 25% 0;}
         .instagram-item a {
             display: block; 
             width: 100%; 
@@ -140,24 +148,16 @@
         }
         .instagram-item-inner p {
             display: inline-block; 
-            padding-left: 33px; 
+            padding-left: 2vw; 
             position: relative; 
-            top: 50%; 
-            transform: translateY(-50%); 
+            top: 43%; 
             font-size: 1.25rem; 
             color: #fff;
         }
         .instagram-item-inner p:before {
-            display: block; 
-            width: 20px; 
-            height: 20px; 
             position: absolute; 
-            left: 0; 
-            top: 50%; 
-            margin-top: -11px; 
+            left: 0;  
             content: '♡'; 
-            font-size: 1.25rem; 
-            line-height: 1;
         }
         .instagram-item a:hover .instagram-item-inner {opacity: 1; visibility: visible;}
         .instagram-item a:hover {transform: scale(1.1); transition: 3s;}
@@ -192,12 +192,12 @@
     
     <div id="main">
         <div class="main_box" id="main_1">
-            <div class="main_1_content">COLLAGEN CUBE
-                <div class="product_img"></div></div>
-            <div class="main_1_content">BLOCK CUBE
-                <div class="product_img"></div></div>
-            <div class="main_1_content">PERFECT CUBE
-                <div class="product_img"></div></div>
+            <div class="main_1_content"><a href="product_collagen.html">COLLAGEN CUBE
+                <div class="product_img"></div></a></div>
+            <div class="main_1_content"><a href="product_collagen.html">BLOCK CUBE
+                <div class="product_img"></div></a></div>
+            <div class="main_1_content"><a href="product_collagen.html">PERFECT CUBE
+                <div class="product_img"></div></a></div>
         </div>
         <div class="main_box" id="main_2">
             <div class="main_2_content">
@@ -205,14 +205,14 @@
                 <div><div class="main_2_img"></div></div>
                 <div>속부터 시작하는</div>
                 <div>BEAUTY SKIN</div>
-                <div class="more"><a href="">MORE</a></div>
+                <div class="more"><a href="shop.html#main_1">MORE</a></div>
             </div>
             <div class="main_2_content">
                 <div><div class="main_2_img"></div></div>
                 <div><div class="main_2_img"></div></div>
                 <div>속부터 시작하는</div>
                 <div>SLIM BODY</div>
-                <div class="more"><a href="">MORE</a></div>
+                <div class="more"><a href="shop.html#main_2">MORE</a></div>
             </div>
         </div>
         <div class="main_box" id="main_3">
