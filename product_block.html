@@ -116,7 +116,7 @@
                 <div class="product_day_text">3주 분량, 성인 1일 2회, 1회 2정 물과 함께 섭취<br>46.2g (550mg x 84 Tablets)</div>
                 <div class="product_day_text">3주 분량, 성인 1일 2회, 1회 2정 물과 함께 섭취<br>123.2g (550mg x 224 Tablets)</div>
                 <div class="product_day_text">-</div>
-                <div id="gotobuy">구매하기</div>
+                <div id="gotobuy">상세보기</div>
                 <div>※ G마켓으로 이동합니다.</div>
             </div>
         </div>
@@ -224,6 +224,7 @@
             product_day = index-3;
             $('.product_day_text').css('display','none');
             $('.product_day_text:nth-of-type('+(1+index)+')').css('display','block');
+            if(product_day == 0) $('#gotobuy').text('상세보기');
             if(product_day == 1) $('#gotobuy').text('상품이 준비중입니다.');
         });
         
