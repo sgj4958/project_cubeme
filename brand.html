@@ -42,9 +42,7 @@
         #main_5 #plus {position: absolute; text-align: center; color: gold; font-size: 10rem; cursor: pointer; width: 20%; height: 30%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; z-index: 1;}
         #main_5 #plus:after {content: 'Click!'; position: absolute; left: 0; font-size: 1rem; text-align: center; color: #000; width: 100%; animation: jelly_pop 1s infinite; line-height: 5;}
         #main_5 #hidden_main {width: 100%; height: 100%; position: absolute; left: 0; top: 0; opacity: 0;}
-        #main_5 #hidden_main .hidden_main_img {width: 50%; height: 50%; float: left; background-size: contain; background-position: center; background-repeat: no-repeat; position: absolute;}
-        #main_5 #hidden_main .hidden_main_img:nth-child(1) {background-image: url(brand/brand_drawing.jpg); left: 10%; top: 10%;}
-        #main_5 #hidden_main .hidden_main_img:nth-child(2) {background-image: url(brand/brand_logo_custom.svg); width: 30%; height: 30%; left: 50%; top: 40%;}
+        #main_5 #hidden_main .hidden_main_img {width: 50%; height: 50%; background-size: cover; position: absolute; top: 25%; left: 25%; background-image: url(brand/brand_drawing.jpg); box-shadow: 50px 50px 100px #aaa;}
         
         .jelly_pop {animation: jelly_pop .8s 0s 1; animation-fill-mode: both;}
         @keyframes jelly_pop {
@@ -54,11 +52,22 @@
             75% {transform: scale(0.95, 1.05);}
         }
         
-        #main_5 #download {position: absolute; bottom: 0; background-color: rgba(255,255,255,.7); border-top: 1; border-bottom: 1; border-width: 1px; border-style: solid; border-color: gold; overflow: hidden; width: 100%; height: 25%; opacity: 0; visibility: hidden;}
-        #main_5 #download_wrap {position: absolute; margin: auto 29%; left: 0; top: 0; right: 0; bottom: 0; height: 30%; align-content: center; width: 100%;}
-        #main_5 .download {width: 10%; height: 30px; float: left; border: 1px solid gold; background-color: #000; color: gold; padding: 1%; margin: 1%; text-align: center; line-height: 30px;}
-        #main_5 .download:hover {font-size: 1.3rem; transition: .5s;}
-        #main_5 #download p {font-size: 1.3rem; text-align: center;}
+        /* init logo motion */
+        #main_6 .logo-area {position: absolute;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 175px;height: 175px;background-image: url('brand/motion-logo_black.png');background-size: 1068px 1068px;}
+        
+        #main_7 #main_text p {cursor: pointer; color: plum;}
+        #main_7 svg path {
+            stroke-dasharray: 850;
+            stroke-dashoffset: 0;
+            animation: logo 5s infinite;
+        }
+        #main_7 svg {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(.8);}
+        #main_7 #download {position: absolute; bottom: 0; background-color: rgba(255,255,255,.7); border-top: 1; border-bottom: 1; border-width: 1px; border-style: solid; border-color: gold; overflow: hidden; width: 100%; height: 25%; opacity: 0; visibility: hidden; transform: translateY(-100%);}
+        #main_7 #download_wrap {position: absolute; margin: auto 29%; left: 0; top: 0; right: 0; bottom: 0; height: 30%; align-content: center; width: 100%;}
+        #main_7 .download {width: 10%; height: 30px; float: left; border: 1px solid gold; background-color: #000; color: gold; padding: 1%; margin: 1%; text-align: center; line-height: 30px;}
+        #main_7 .download:hover {font-size: 1.3rem; transition: .5s;}
+        #main_7 #download p {font-size: 1.3rem; text-align: center;}
+        
         
         /* 반응형 설정 시작 */
         @media only screen and (max-width: 1281px) {
@@ -155,8 +164,23 @@
             <div id="plus">+</div>
             <div id="hidden_main">
                 <div class="hidden_main_img"></div>
-                <div class="hidden_main_img"></div>
-                <div id="main_text">입술로 큐브를 살짝 문 모습의 브랜드 로고가 탄생하였습니다.</div>
+                <div id="main_text">새로운 로고는 입술로 큐브를 살짝 문 모습을 나타내습니다.</div>
+            </div>
+        </div>
+        <div class="main_box" id="main_6">
+            <div class="split">
+                <div class="logo-area"></div>
+            </div>
+            <div class="split">
+                <div id="main_text"><p>한선긋기</p>또한, 기존 브랜드에서 로딩 이미지로 쓰이던 로고가 '한선긋기'임을 감안하여, <br>새로운 로고 또한 애니메이션을 사용하여 이를 반영하였습니다.<br><br>참고로, <br>기존 로고는 png 이미지의 'background-position' 속성을 조절하는 방식이며, <br>새로운 로고는 'stroke-dashoffset' 속성을 조절하는 방식입니다.</div>
+            </div>
+        </div>
+        <div class="main_box" id="main_7">
+            <div class="split">
+                <svg data-name="Layer 3 copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 162.78 86.29"><defs><style>.afr8da{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1px;}</style></defs><path class="afr8da" d="M694.5,412.5s-1-10-9-13c-7-1-10,4-11,13,0,0-2,17,10,23,15,8.06,34-21,34-21a159.13,159.13,0,0,0,10.2-18.28.42.42,0,0,1,.8.18v30.33a.86.86,0,0,1-1.39.67L703.8,408.13a.8.8,0,0,0-1.3.63v35a4.64,4.64,0,0,0,6.81,4.09h0l24.47-14.29a3,3,0,0,0,1.5-2.61V388.24a3.41,3.41,0,0,0-1.69-2.95L721.14,378a7,7,0,0,0-6.45.77,24.31,24.31,0,0,1-24.25-.07s-3.31-2.18-6.63-.7l-12.4,7.27a3.4,3.4,0,0,0-1.69,2.95V431a3,3,0,0,0,1.49,2.61l27.48,16.1c2.16,1.21,2.81,1.8,3.81,1.78h0c44.22,0,72.79-32.83,78.81-40.42a2.51,2.51,0,0,0,0-3.13c-5.51-6.95-29.82-34.91-67.65-39.71-3.6-.46-11.15,5.28-11.15,5.28s-7.56-5.74-11.15-5.28c-43.28,5.49-68.85,41.28-68.85,41.28l-.22.45a2,2,0,0,0,.24,2.14c7,8.51,31.75,35.3,69.35,39" transform="translate(-620.57 -366.69)"/></svg>
+            </div>
+            <div class="split">
+                <div id="main_text"><p>다운로드</p>완성된 로고는 위의 글씨를 클릭하시면 다운로드 가능합니다.<br>감사합니다.</div>
             </div>
             <div id="download">
                 <p>로고 다운로드</p>
@@ -179,6 +203,63 @@
             $("#footer").load("footer.html");
             
             scroll100per();
+            
+            
+	// init logo motion
+    var Sprite = {
+        _timer:0,
+        appInit:function(){
+        var _this = Sprite;
+            _this.layout();
+            _this.reset();
+        },
+        layout:function(){
+            this.$el = $('.logo-area');
+        },
+        reset:function(){
+            this._cuId = 0;
+            this._max = 36;
+            this._col = 6;
+            this._row = 6;
+                this._maxW = 1068;
+                this._maxH = 1068;
+            this._width = this._maxW / this._col;
+            this._height = this._maxH / this._row;
+            this.update();
+        },
+        play:function(){
+            var _this = Sprite;
+            clearInterval(_this._timer);
+            _this._timer = setInterval(_this.progress, 40);
+        },
+        progress:function(){
+            var _this = Sprite;
+                _this._cuId++;
+            if(_this._cuId <= 0){
+                _this._cuId = 0;
+            }
+            if(_this._cuId >= _this._max - 1){
+                _this._cuId = _this._max - 1;
+
+                clearInterval(_this._timer);
+                
+                setTimeout(function(){
+                    _this.reset();
+                    _this.play();
+                }, 1000);
+            }
+            _this.update();
+        },
+        update:function(){
+            var _this = Sprite, x, y;
+                x = _this._cuId % _this._col * _this._width * -1;
+                y = Math.floor(_this._cuId / _this._row) * _this._height * -1;
+                _this.$el.css({'background-position':x + 'px ' + y + 'px'});
+        }
+    };
+    Sprite.appInit();
+    Sprite.play();
+            
         });
         
         function resolution() {
@@ -265,9 +346,9 @@
                 'transition-delay':'.7s'
             });
             if(window.pageYOffset >= innerHeight * 2) $('#main_3 .split').addClass('jelly_pop');
-            if(window.pageYOffset >= innerHeight * 3) $('#main_4 #main_img').addClass('jelly_pop');
+            //if(window.pageYOffset >= innerHeight * 3) $('#main_4 #main_img').addClass('jelly_pop');
             if(window.pageYOffset > innerHeight * 4) {
-                if(!end_check) alert('로고 제작 비하인드 끝!');
+                //if(!end_check) alert('로고 제작 비하인드 끝!');
                 end_check = true;
             }
         });
@@ -303,12 +384,15 @@
             $('#main_5 #hidden_main .hidden_main_img').css({
                 'animation-delay':'1s'
             });
-            
-            $('#main_5 #download').css({
+        });
+        
+        $('#main_7 #main_text p').click(function(){
+            $('#download').css({
                 'opacity':1,
                 'visibility':'visible',
                 'transition':'.5s',
-                'transition-delay':'3s'
+                'transition-delay':'0',
+                'transform':'translateY(0)'
             });
         });
         
